@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo 教程：从 0 到 1 的入门教程</title>
+    <url>/2024/11/01/26/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！在这个教程中，我们将一步一步带你搭建自己的博客。无论你是初学者还是有经验的开发者，Hexo 都能让你轻松创建和管理博客。</p>
+<h2 id="为什么选择-Hexo？"><a href="#为什么选择-Hexo？" class="headerlink" title="为什么选择 Hexo？"></a>为什么选择 Hexo？</h2><ul>
+<li><p><strong>快速</strong>：Hexo 使用静态文件生成，加载速度极快。</p>
+</li>
+<li><p><strong>简洁</strong>：Markdown 支持，让写作变得简单。</p>
+</li>
+<li><p><strong>丰富的主题</strong>：社区提供了多种主题选择，帮助你快速美化博客。</p>
+<span id="more"></span></li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1-安装-Hexo"><a href="#1-安装-Hexo" class="headerlink" title="1. 安装 Hexo"></a>1. 安装 Hexo</h3><p>确保你已经安装了 <a href="https://nodejs.org/">Node.js</a>。接下来，打开终端，输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建新博客"><a href="#2-创建新博客" class="headerlink" title="2. 创建新博客"></a>2. 创建新博客</h3><p>在你想要创建博客的目录下，运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init my-blog</span><br><span class="line">$ <span class="built_in">cd</span> my-blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-创建新帖子"><a href="#3-创建新帖子" class="headerlink" title="3. 创建新帖子"></a>3. 创建新帖子</h3><p>创建新帖子非常简单，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;my new post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>在 <code>source/_posts/</code> 目录下，你会看到新生成的 Markdown 文件。</p>
+<h3 id="4-启动本地服务器"><a href="#4-启动本地服务器" class="headerlink" title="4. 启动本地服务器"></a>4. 启动本地服务器</h3><p>运行以下命令启动本地服务器：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>然后在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a>，你就能看到你的博客了！</p>
+<h3 id="5-生成静态文件"><a href="#5-生成静态文件" class="headerlink" title="5. 生成静态文件"></a>5. 生成静态文件</h3><p>当你准备好发布博客时，运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>这会在 <code>public/</code> 目录下生成静态文件。</p>
+<h3 id="6-部署到远程网站"><a href="#6-部署到远程网站" class="headerlink" title="6. 部署到远程网站"></a>6. 部署到远程网站</h3><p>配置好 <code>_config.yml</code> 文件中的部署信息后，运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>你的博客就会被部署到远程服务器上！</p>
+<h2 id="进阶用法"><a href="#进阶用法" class="headerlink" title="进阶用法"></a>进阶用法</h2><p>Hexo 的配置文件 <code>_config.yml</code> 中有很多高级选项，例如自定义域名、评论系统、SEO 等。你可以在文档中找到更多信息。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>如果在使用过程中遇到问题，可以参考 <a href="https://hexo.io/docs/">Hexo 文档</a> 或在 <a href="https://github.com/hexojs/hexo/issues">GitHub Issues</a> 提问。</p>
+<h2 id="更多资源"><a href="#更多资源" class="headerlink" title="更多资源"></a>更多资源</h2><ul>
+<li><a href="https://hexo.io/docs/">Hexo 官方文档</a></li>
+<li><a href="https://hexo.io/themes/">Hexo 主题</a></li>
+<li><a href="https://hexo.io/plugins/">Hexo 插件</a></li>
+<li><a href="https://talk.hexo.io/">Hexo 官方论坛</a></li>
+<li><a href="https://github.com/hexojs/awesome-hexo">Hexo 社区</a></li>
+<li><a href="https://hexo.io/blog/">Hexo 官方博客</a></li>
+<li><a href="https://github.com/hexojs/hexo">Hexo 官方仓库</a></li>
+</ul>
+]]></content>
+  </entry>
+</search>
