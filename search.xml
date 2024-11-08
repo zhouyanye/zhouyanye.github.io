@@ -54,10 +54,7 @@
     <title>项目三：11.2网络地址转换实训-外部PC访问内网服务器增加配置</title>
     <url>/2024/11/08/00/</url>
     <content><![CDATA[<ul>
-<li><ul>
 <li><strong>FW1</strong>：防火墙</li>
-</ul>
-</li>
 <li><strong>Router-R1</strong>：路由器</li>
 <li><strong>Server-Server1</strong>：服务器</li>
 <li><strong>Client-Client1</strong>：客户端</li>
