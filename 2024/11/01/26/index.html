@@ -14,10 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhouyanye.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"icon":"mac","style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhouyanye.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"icon":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="欢迎来到 Hexo！在这个教程中，我们将一步一步带你搭建自己的博客。无论你是初学者还是有经验的开发者，Hexo 都能让你轻松创建和管理博客。  为什么选择 Hexo？  * 快速：Hexo 使用静态文件生成，加载速度极快。          * 简洁：Markdown 支持，让写作变得简单。          * 丰富的主题：社区提供了多种主题选择，帮助你快速美化博客。          快速开始">
@@ -207,10 +209,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
   <div class="reading-progress-bar"></div>
   <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
@@ -268,6 +266,13 @@
               <span class="post-meta-item-text">阅读次数：</span>
               <span class="leancloud-visitors-count"></span>
             </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -313,29 +318,24 @@
 <li><p><strong>简洁</strong>：Markdown 支持，让写作变得简单。</p>
 </li>
 <li><p><strong>丰富的主题</strong>：社区提供了多种主题选择，帮助你快速美化博客。</p>
-<span id="more"></span></li>
+<span id="more"></span>
+</li>
 </ul>
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1-安装-Hexo"><a href="#1-安装-Hexo" class="headerlink" title="1. 安装 Hexo"></a>1. 安装 Hexo</h3><p>确保你已经安装了 <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a>。接下来，打开终端，输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
 <h3 id="2-创建新博客"><a href="#2-创建新博客" class="headerlink" title="2. 创建新博客"></a>2. 创建新博客</h3><p>在你想要创建博客的目录下，运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init my-blog</span><br><span class="line">$ <span class="built_in">cd</span> my-blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
 <h3 id="3-创建新帖子"><a href="#3-创建新帖子" class="headerlink" title="3. 创建新帖子"></a>3. 创建新帖子</h3><p>创建新帖子非常简单，使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;my new post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>在 <code>source/_posts/</code> 目录下，你会看到新生成的 Markdown 文件。</p>
 <h3 id="4-启动本地服务器"><a href="#4-启动本地服务器" class="headerlink" title="4. 启动本地服务器"></a>4. 启动本地服务器</h3><p>运行以下命令启动本地服务器：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>然后在浏览器中访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>，你就能看到你的博客了！</p>
+<p>然后在浏览器中访问 <a target="_blank" rel="noopener" href="http://localhost:4000">http://localhost:4000</a>，你就能看到你的博客了！</p>
 <h3 id="5-生成静态文件"><a href="#5-生成静态文件" class="headerlink" title="5. 生成静态文件"></a>5. 生成静态文件</h3><p>当你准备好发布博客时，运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>这会在 <code>public/</code> 目录下生成静态文件。</p>
 <h3 id="6-部署到远程网站"><a href="#6-部署到远程网站" class="headerlink" title="6. 部署到远程网站"></a>6. 部署到远程网站</h3><p>配置好 <code>_config.yml</code> 文件中的部署信息后，运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>你的博客就会被部署到远程服务器上！</p>
 <h2 id="进阶用法"><a href="#进阶用法" class="headerlink" title="进阶用法"></a>进阶用法</h2><p>Hexo 的配置文件 <code>_config.yml</code> 中有很多高级选项，例如自定义域名、评论系统、SEO 等。你可以在文档中找到更多信息。</p>
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>如果在使用过程中遇到问题，可以参考 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo 文档</a> 或在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub Issues</a> 提问。</p>
@@ -361,10 +361,10 @@
       <div class="popular-posts-title"><a href="\2024\11\14\20\" rel="bookmark">C语言 学习笔记</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2024\11\12\30\" rel="bookmark">Python3 学习笔记</a></div>
+      <div class="popular-posts-title"><a href="\2024\11\13\48\" rel="bookmark">SpringBoot2和Hive3结合</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2024\11\13\48\" rel="bookmark">SpringBoot2和Hive3结合</a></div>
+      <div class="popular-posts-title"><a href="\2024\11\12\30\" rel="bookmark">Python3 学习笔记</a></div>
     </li>
   </ul>
 <div>
@@ -492,6 +492,10 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=451126390&auto=1&height=66"></iframe>    </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -597,6 +601,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
   <div style="display: none;">
